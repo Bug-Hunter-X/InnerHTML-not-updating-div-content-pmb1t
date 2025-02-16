@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv">
+    This text should be visible.
+  </div>
+  <script>
+    // Solution: Use a DOMContentLoaded event listener to ensure the script executes after the page is fully loaded. 
+    document.addEventListener('DOMContentLoaded', function() {
+      document.getElementById("myDiv").innerHTML = "<p>This text should replace the existing content.</p>";
+    });
+  </script>
+</body>
+</html>
